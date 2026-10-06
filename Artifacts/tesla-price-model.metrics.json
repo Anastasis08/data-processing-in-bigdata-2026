@@ -1,0 +1,16 @@
+{
+  "CreatedAtUtc": "2026-10-05T22:14:05.6939316+00:00",
+  "DataSha256": "FAF437BDE157F68474317ABBA50F1FFC01D97991A5FE85B145EB9AA05D854723",
+  "FirstDate": "2010-07-07",
+  "TrainingEndDate": "2018-03-02",
+  "TestStartDate": "2018-03-05",
+  "LastDate": "2020-02-03",
+  "TrainingRows": 1928,
+  "TestRows": 483,
+  "SerializedModelRows": 2411,
+  "MeanAbsoluteError": 7.695313226609003,
+  "RootMeanSquaredError": 12.529794799336022,
+  "RSquared": 0.969617862858506,
+  "BaselineMeanAbsoluteError": 7.636604309082031,
+  "BaselineRootMeanSquaredError": 12.38628292270751
+}
