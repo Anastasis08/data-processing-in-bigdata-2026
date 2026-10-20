@@ -9,6 +9,7 @@
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <DefaultItemExcludes>$(DefaultItemExcludes);Lab2/**</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>
