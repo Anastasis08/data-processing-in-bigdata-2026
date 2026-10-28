@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab4 - loan approval (ONNX)</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+    form { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem 1rem; }
+    label { display: grid; gap: .25rem; font-size: .9rem; }
+    input, select, button { font: inherit; padding: .4rem; }
+    button { grid-column: span 2; cursor: pointer; }
+    #result { margin-top: 1.5rem; padding: 1rem; border-radius: .5rem; display: none; }
+    #result.approve { display: block; background: #2e7d3233; }
+    #result.reject { display: block; background: #c6282833; }
+    #result.error { display: block; background: #f9a82533; }
+  </style>
+</head>
+<body>
+  <h1>Схвалення кредиту</h1>
+  <p>Модель ML.NET, експортована в ONNX, обслуговується через <code>PredictionEnginePool</code>.</p>
+
+  <form id="loan-form">
+    <label>Стать
+      <select name="gender"><option>Male</option><option>Female</option><option value="">Невідомо</option></select>
+    </label>
+    <label>У шлюбі
+      <select name="married"><option>Yes</option><option>No</option><option value="">Невідомо</option></select>
+    </label>
+    <label>Утриманці
+      <select name="dependents"><option>0</option><option>1</option><option>2</option><option>3+</option><option value="">Невідомо</option></select>
+    </label>
+    <label>Освіта
+      <select name="education"><option>Graduate</option><option>Not Graduate</option><option value="">Невідомо</option></select>
+    </label>
+    <label>Самозайнятий
+      <select name="selfEmployed"><option>No</option><option>Yes</option><option value="">Невідомо</option></select>
+    </label>
+    <label>Кредитна історія
+      <select name="creditHistory"><option value="1">1 - є</option><option value="0">0 - немає</option><option value="">Невідомо</option></select>
+    </label>
+    <label>Дохід заявника
+      <input name="applicantIncome" type="number" min="0" value="5000" required>
+    </label>
+    <label>Дохід співзаявника
+      <input name="coapplicantIncome" type="number" min="0" value="1500" required>
+    </label>
+    <label>Сума кредиту (тис.)
+      <input name="loanAmount" type="number" min="1" value="130" placeholder="порожньо = невідомо">
+    </label>
+    <label>Строк (міс.)
+      <input name="loanAmountTerm" type="number" min="1" value="360" placeholder="порожньо = невідомо">
+    </label>
+    <label>Місцевість
+      <select name="propertyArea"><option>Semiurban</option><option>Urban</option><option>Rural</option><option value="">Невідомо</option></select>
+    </label>
+    <button type="submit">Оцінити заявку</button>
+  </form>
+
+  <div id="result" role="status"></div>
+
+  <script>
+    const form = document.getElementById("loan-form");
+    const result = document.getElementById("result");
+    const numberFields = new Set(["applicantIncome", "coapplicantIncome", "loanAmount", "loanAmountTerm"]);
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      const body = {};
+      for (const [name, value] of new FormData(form)) {
+        body[name] = value === "" ? null : numberFields.has(name) ? Number(value) : value;
+      }
+
+      const response = await fetch("/api/loans/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        result.className = "error";
+        result.textContent = `Помилка ${response.status}: ${JSON.stringify(data.errors ?? data.title)}`;
+        return;
+      }
+
+      result.className = data.isApproved ? "approve" : "reject";
+      result.textContent = `${data.decision}: ймовірність схвалення ${(data.approvalProbability * 100).toFixed(1)} %`;
+    });
+  </script>
+</body>
+</html>

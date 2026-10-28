@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>Lab4</AssemblyName>
+    <RootNamespace>Lab4.Cli</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lab4.Model\Lab4.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.FastTree" />
+    <PackageReference Include="Microsoft.ML.LightGbm" />
+    <PackageReference Include="Microsoft.ML.OnnxConverter" />
+    <PackageReference Include="Google.Protobuf" />
+  </ItemGroup>
+
+</Project>

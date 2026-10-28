@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Lab4.Cli/Lab4.Cli.csproj" />
+    <Project Path="src/Lab4.Model/Lab4.Model.csproj" />
+    <Project Path="src/Lab4.Web/Lab4.Web.csproj" />
+  </Folder>
+</Solution>
