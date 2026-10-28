@@ -1,0 +1,7 @@
+Loan_ID,Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,LoanAmount,Loan_Amount_Term,Credit_History,Property_Area
+NEW0001,Male,Yes,1,Graduate,No,6500,2000,150,360,1,Semiurban
+NEW0002,Female,No,0,Graduate,No,3200,0,110,360,0,Urban
+NEW0003,Male,Yes,3+,Not Graduate,Yes,2100,0,250,360,1,Rural
+NEW0004,Female,Yes,2,Graduate,No,4800,1500,,360,,Urban
+NEW0005,Male,No,0,Not Graduate,No,15000,0,500,180,1,Semiurban
+NEW0006,,Yes,0,Graduate,Yes,2500,3000,90,,0,Rural
