@@ -1,0 +1,617 @@
+{
+  "CreatedAtUtc": "2026-10-26T15:50:46.1540033+00:00",
+  "Seed": 42,
+  "TrainingFraction": 0.6,
+  "ValidationFraction": 0.2,
+  "DetectionDelay": 7,
+  "Kpis": [
+    {
+      "Kpi": "cpu4",
+      "DataSha256": "E25D3176CB8C5E0D30F03FEA004D3055248B43D18AA1A5FD4883186F2DE10FC5",
+      "Points": 17568,
+      "StepSeconds": 300,
+      "ImputedPoints": 0,
+      "Anomalies": 209,
+      "TrainingNormalPoints": 8434,
+      "ValidationRange": [
+        10540,
+        14053
+      ],
+      "TestRange": [
+        14054,
+        17567
+      ],
+      "Window": 4,
+      "Rank": 4,
+      "Threshold": 0.8281244,
+      "SelectionMetric": "Delay-adjusted F1 on the validation part",
+      "Candidates": [
+        {
+          "Window": 4,
+          "Rank": 2,
+          "Threshold": 0.97156984,
+          "Validation": {
+            "TruePositives": 29,
+            "FalsePositives": 48,
+            "FalseNegatives": 14,
+            "Precision": 0.37662337662337664,
+            "Recall": 0.6744186046511628,
+            "F1Score": 0.48333333333333334
+          }
+        },
+        {
+          "Window": 4,
+          "Rank": 4,
+          "Threshold": 0.8281244,
+          "Validation": {
+            "TruePositives": 30,
+            "FalsePositives": 14,
+            "FalseNegatives": 13,
+            "Precision": 0.6818181818181818,
+            "Recall": 0.6976744186046512,
+            "F1Score": 0.6896551724137931
+          }
+        },
+        {
+          "Window": 8,
+          "Rank": 4,
+          "Threshold": 0.70694435,
+          "Validation": {
+            "TruePositives": 43,
+            "FalsePositives": 216,
+            "FalseNegatives": 0,
+            "Precision": 0.16602316602316602,
+            "Recall": 1,
+            "F1Score": 0.2847682119205298
+          }
+        },
+        {
+          "Window": 8,
+          "Rank": 8,
+          "Threshold": 0.520975,
+          "Validation": {
+            "TruePositives": 26,
+            "FalsePositives": 41,
+            "FalseNegatives": 17,
+            "Precision": 0.3880597014925373,
+            "Recall": 0.6046511627906976,
+            "F1Score": 0.4727272727272727
+          }
+        },
+        {
+          "Window": 16,
+          "Rank": 8,
+          "Threshold": 0.7633376,
+          "Validation": {
+            "TruePositives": 26,
+            "FalsePositives": 50,
+            "FalseNegatives": 17,
+            "Precision": 0.34210526315789475,
+            "Recall": 0.6046511627906976,
+            "F1Score": 0.43697478991596644
+          }
+        },
+        {
+          "Window": 16,
+          "Rank": 16,
+          "Threshold": 0.35664427,
+          "Validation": {
+            "TruePositives": 26,
+            "FalsePositives": 26,
+            "FalseNegatives": 17,
+            "Precision": 0.5,
+            "Recall": 0.6046511627906976,
+            "F1Score": 0.5473684210526316
+          }
+        },
+        {
+          "Window": 32,
+          "Rank": 16,
+          "Threshold": 0.75206953,
+          "Validation": {
+            "TruePositives": 26,
+            "FalsePositives": 30,
+            "FalseNegatives": 17,
+            "Precision": 0.4642857142857143,
+            "Recall": 0.6046511627906976,
+            "F1Score": 0.5252525252525253
+          }
+        }
+      ],
+      "Test": {
+        "PointWise": {
+          "TruePositives": 0,
+          "FalsePositives": 58,
+          "FalseNegatives": 7,
+          "Precision": 0,
+          "Recall": 0,
+          "F1Score": 0
+        },
+        "DelayAdjusted": {
+          "TruePositives": 0,
+          "FalsePositives": 58,
+          "FalseNegatives": 7,
+          "Precision": 0,
+          "Recall": 0,
+          "F1Score": 0
+        },
+        "AreaUnderRocCurve": 0.5886186810053363,
+        "DetectionRateAtFalsePositiveCount": 0
+      },
+      "BaselineThreshold": 21.999788,
+      "BaselineValidation": {
+        "TruePositives": 31,
+        "FalsePositives": 8,
+        "FalseNegatives": 12,
+        "Precision": 0.7948717948717948,
+        "Recall": 0.7209302325581395,
+        "F1Score": 0.7560975609756098
+      },
+      "BaselineTest": {
+        "TruePositives": 0,
+        "FalsePositives": 6,
+        "FalseNegatives": 7,
+        "Precision": 0,
+        "Recall": 0,
+        "F1Score": 0
+      },
+      "ModelFile": "cpu4.zip"
+    },
+    {
+      "Kpi": "g",
+      "DataSha256": "1F064EF8A1659C8215BBBEC17F42FC347B1589DDA16CD20E93F29BB85E7E889F",
+      "Points": 142940,
+      "StepSeconds": 60,
+      "ImputedPoints": 400,
+      "Anomalies": 8365,
+      "TrainingNormalPoints": 69963,
+      "ValidationRange": [
+        85764,
+        114351
+      ],
+      "TestRange": [
+        114352,
+        142939
+      ],
+      "Window": 32,
+      "Rank": 16,
+      "Threshold": 0.75932926,
+      "SelectionMetric": "Delay-adjusted F1 on the validation part",
+      "Candidates": [
+        {
+          "Window": 4,
+          "Rank": 2,
+          "Threshold": 0.96857035,
+          "Validation": {
+            "TruePositives": 639,
+            "FalsePositives": 1043,
+            "FalseNegatives": 1221,
+            "Precision": 0.3799048751486326,
+            "Recall": 0.3435483870967742,
+            "F1Score": 0.36081309994353467
+          }
+        },
+        {
+          "Window": 4,
+          "Rank": 4,
+          "Threshold": 0.84015626,
+          "Validation": {
+            "TruePositives": 595,
+            "FalsePositives": 560,
+            "FalseNegatives": 1265,
+            "Precision": 0.5151515151515151,
+            "Recall": 0.31989247311827956,
+            "F1Score": 0.3946932006633499
+          }
+        },
+        {
+          "Window": 8,
+          "Rank": 4,
+          "Threshold": 0.8567915,
+          "Validation": {
+            "TruePositives": 750,
+            "FalsePositives": 2349,
+            "FalseNegatives": 1110,
+            "Precision": 0.2420135527589545,
+            "Recall": 0.4032258064516129,
+            "F1Score": 0.3024803387779794
+          }
+        },
+        {
+          "Window": 8,
+          "Rank": 8,
+          "Threshold": 0.37933782,
+          "Validation": {
+            "TruePositives": 770,
+            "FalsePositives": 4269,
+            "FalseNegatives": 1090,
+            "Precision": 0.15280809684461202,
+            "Recall": 0.41397849462365593,
+            "F1Score": 0.22322075663139587
+          }
+        },
+        {
+          "Window": 16,
+          "Rank": 8,
+          "Threshold": 0.8347992,
+          "Validation": {
+            "TruePositives": 680,
+            "FalsePositives": 579,
+            "FalseNegatives": 1180,
+            "Precision": 0.5401111993645751,
+            "Recall": 0.3655913978494624,
+            "F1Score": 0.4360371914075024
+          }
+        },
+        {
+          "Window": 16,
+          "Rank": 16,
+          "Threshold": 0.24945298,
+          "Validation": {
+            "TruePositives": 767,
+            "FalsePositives": 7354,
+            "FalseNegatives": 1093,
+            "Precision": 0.09444649673685507,
+            "Recall": 0.41236559139784945,
+            "F1Score": 0.15369201482817355
+          }
+        },
+        {
+          "Window": 32,
+          "Rank": 16,
+          "Threshold": 0.75932926,
+          "Validation": {
+            "TruePositives": 671,
+            "FalsePositives": 531,
+            "FalseNegatives": 1189,
+            "Precision": 0.5582362728785357,
+            "Recall": 0.36075268817204303,
+            "F1Score": 0.4382756368386675
+          }
+        }
+      ],
+      "Test": {
+        "PointWise": {
+          "TruePositives": 23,
+          "FalsePositives": 522,
+          "FalseNegatives": 905,
+          "Precision": 0.04220183486238532,
+          "Recall": 0.02478448275862069,
+          "F1Score": 0.03122878479293958
+        },
+        "DelayAdjusted": {
+          "TruePositives": 654,
+          "FalsePositives": 522,
+          "FalseNegatives": 274,
+          "Precision": 0.5561224489795918,
+          "Recall": 0.7047413793103449,
+          "F1Score": 0.6216730038022814
+        },
+        "AreaUnderRocCurve": 0.5416201115141995,
+        "DetectionRateAtFalsePositiveCount": 0.0021551724137931034
+      },
+      "BaselineThreshold": 9.126948,
+      "BaselineValidation": {
+        "TruePositives": 1221,
+        "FalsePositives": 1112,
+        "FalseNegatives": 639,
+        "Precision": 0.5233604800685813,
+        "Recall": 0.6564516129032258,
+        "F1Score": 0.5823992368232769
+      },
+      "BaselineTest": {
+        "TruePositives": 883,
+        "FalsePositives": 701,
+        "FalseNegatives": 45,
+        "Precision": 0.5574494949494949,
+        "Recall": 0.9515086206896551,
+        "F1Score": 0.7030254777070063
+      },
+      "ModelFile": "g.zip"
+    },
+    {
+      "Kpi": "rver_res_eth1out_curve_6",
+      "DataSha256": "DAADB7302297A315A31AD1EAB76A797C9D2B3BB4C39975D03A1C476F12FE9E52",
+      "Points": 17568,
+      "StepSeconds": 300,
+      "ImputedPoints": 0,
+      "Anomalies": 67,
+      "TrainingNormalPoints": 8439,
+      "ValidationRange": [
+        10540,
+        14053
+      ],
+      "TestRange": [
+        14054,
+        17567
+      ],
+      "Window": 32,
+      "Rank": 16,
+      "Threshold": 0.841214,
+      "SelectionMetric": "Delay-adjusted F1 on the validation part",
+      "Candidates": [
+        {
+          "Window": 4,
+          "Rank": 2,
+          "Threshold": 0.96101433,
+          "Validation": {
+            "TruePositives": 3,
+            "FalsePositives": 373,
+            "FalseNegatives": 0,
+            "Precision": 0.007978723404255319,
+            "Recall": 1,
+            "F1Score": 0.015831134564643797
+          }
+        },
+        {
+          "Window": 4,
+          "Rank": 4,
+          "Threshold": 0.5865698,
+          "Validation": {
+            "TruePositives": 3,
+            "FalsePositives": 403,
+            "FalseNegatives": 0,
+            "Precision": 0.007389162561576354,
+            "Recall": 1,
+            "F1Score": 0.014669926650366748
+          }
+        },
+        {
+          "Window": 8,
+          "Rank": 4,
+          "Threshold": 0.9549452,
+          "Validation": {
+            "TruePositives": 3,
+            "FalsePositives": 9,
+            "FalseNegatives": 0,
+            "Precision": 0.25,
+            "Recall": 1,
+            "F1Score": 0.4
+          }
+        },
+        {
+          "Window": 8,
+          "Rank": 8,
+          "Threshold": 0.34218952,
+          "Validation": {
+            "TruePositives": 3,
+            "FalsePositives": 263,
+            "FalseNegatives": 0,
+            "Precision": 0.011278195488721804,
+            "Recall": 1,
+            "F1Score": 0.022304832713754646
+          }
+        },
+        {
+          "Window": 16,
+          "Rank": 8,
+          "Threshold": 0.8389628,
+          "Validation": {
+            "TruePositives": 3,
+            "FalsePositives": 3,
+            "FalseNegatives": 0,
+            "Precision": 0.5,
+            "Recall": 1,
+            "F1Score": 0.6666666666666666
+          }
+        },
+        {
+          "Window": 16,
+          "Rank": 16,
+          "Threshold": 0.20404688,
+          "Validation": {
+            "TruePositives": 3,
+            "FalsePositives": 734,
+            "FalseNegatives": 0,
+            "Precision": 0.004070556309362279,
+            "Recall": 1,
+            "F1Score": 0.008108108108108107
+          }
+        },
+        {
+          "Window": 32,
+          "Rank": 16,
+          "Threshold": 0.841214,
+          "Validation": {
+            "TruePositives": 3,
+            "FalsePositives": 0,
+            "FalseNegatives": 0,
+            "Precision": 1,
+            "Recall": 1,
+            "F1Score": 1
+          }
+        }
+      ],
+      "Test": {
+        "PointWise": {
+          "TruePositives": 2,
+          "FalsePositives": 1,
+          "FalseNegatives": 8,
+          "Precision": 0.6666666666666666,
+          "Recall": 0.2,
+          "F1Score": 0.30769230769230765
+        },
+        "DelayAdjusted": {
+          "TruePositives": 6,
+          "FalsePositives": 1,
+          "FalseNegatives": 4,
+          "Precision": 0.8571428571428571,
+          "Recall": 0.6,
+          "F1Score": 0.7058823529411764
+        },
+        "AreaUnderRocCurve": 0.8316780821917809,
+        "DetectionRateAtFalsePositiveCount": 0.3
+      },
+      "BaselineThreshold": 11.690001,
+      "BaselineValidation": {
+        "TruePositives": 3,
+        "FalsePositives": 224,
+        "FalseNegatives": 0,
+        "Precision": 0.013215859030837005,
+        "Recall": 1,
+        "F1Score": 0.02608695652173913
+      },
+      "BaselineTest": {
+        "TruePositives": 6,
+        "FalsePositives": 4,
+        "FalseNegatives": 4,
+        "Precision": 0.6,
+        "Recall": 0.6,
+        "F1Score": 0.6
+      },
+      "ModelFile": "rver_res_eth1out_curve_6.zip"
+    },
+    {
+      "Kpi": "server_res_eth1out_curve_61",
+      "DataSha256": "E2BE42C116BEA1FE5A6F47F5890EC9822A9B315B151B5F9F6DA20FE0AF75835A",
+      "Points": 17568,
+      "StepSeconds": 300,
+      "ImputedPoints": 0,
+      "Anomalies": 320,
+      "TrainingNormalPoints": 8385,
+      "ValidationRange": [
+        10540,
+        14053
+      ],
+      "TestRange": [
+        14054,
+        17567
+      ],
+      "Window": 8,
+      "Rank": 8,
+      "Threshold": 0.6165485,
+      "SelectionMetric": "Delay-adjusted F1 on the validation part",
+      "Candidates": [
+        {
+          "Window": 4,
+          "Rank": 2,
+          "Threshold": 0.9793158,
+          "Validation": {
+            "TruePositives": 20,
+            "FalsePositives": 135,
+            "FalseNegatives": 46,
+            "Precision": 0.12903225806451613,
+            "Recall": 0.30303030303030304,
+            "F1Score": 0.18099547511312217
+          }
+        },
+        {
+          "Window": 4,
+          "Rank": 4,
+          "Threshold": 0.87302566,
+          "Validation": {
+            "TruePositives": 22,
+            "FalsePositives": 32,
+            "FalseNegatives": 44,
+            "Precision": 0.4074074074074074,
+            "Recall": 0.3333333333333333,
+            "F1Score": 0.36666666666666664
+          }
+        },
+        {
+          "Window": 8,
+          "Rank": 4,
+          "Threshold": 0.8899869,
+          "Validation": {
+            "TruePositives": 24,
+            "FalsePositives": 69,
+            "FalseNegatives": 42,
+            "Precision": 0.25806451612903225,
+            "Recall": 0.36363636363636365,
+            "F1Score": 0.3018867924528302
+          }
+        },
+        {
+          "Window": 8,
+          "Rank": 8,
+          "Threshold": 0.6165485,
+          "Validation": {
+            "TruePositives": 27,
+            "FalsePositives": 24,
+            "FalseNegatives": 39,
+            "Precision": 0.5294117647058824,
+            "Recall": 0.4090909090909091,
+            "F1Score": 0.46153846153846156
+          }
+        },
+        {
+          "Window": 16,
+          "Rank": 8,
+          "Threshold": 0.7479074,
+          "Validation": {
+            "TruePositives": 43,
+            "FalsePositives": 98,
+            "FalseNegatives": 23,
+            "Precision": 0.3049645390070922,
+            "Recall": 0.6515151515151515,
+            "F1Score": 0.41545893719806765
+          }
+        },
+        {
+          "Window": 16,
+          "Rank": 16,
+          "Threshold": 0.3483512,
+          "Validation": {
+            "TruePositives": 34,
+            "FalsePositives": 92,
+            "FalseNegatives": 32,
+            "Precision": 0.2698412698412698,
+            "Recall": 0.5151515151515151,
+            "F1Score": 0.3541666666666667
+          }
+        },
+        {
+          "Window": 32,
+          "Rank": 16,
+          "Threshold": 0.6764233,
+          "Validation": {
+            "TruePositives": 33,
+            "FalsePositives": 115,
+            "FalseNegatives": 33,
+            "Precision": 0.22297297297297297,
+            "Recall": 0.5,
+            "F1Score": 0.308411214953271
+          }
+        }
+      ],
+      "Test": {
+        "PointWise": {
+          "TruePositives": 6,
+          "FalsePositives": 33,
+          "FalseNegatives": 81,
+          "Precision": 0.15384615384615385,
+          "Recall": 0.06896551724137931,
+          "F1Score": 0.09523809523809525
+        },
+        "DelayAdjusted": {
+          "TruePositives": 18,
+          "FalsePositives": 33,
+          "FalseNegatives": 69,
+          "Precision": 0.35294117647058826,
+          "Recall": 0.20689655172413793,
+          "F1Score": 0.2608695652173913
+        },
+        "AreaUnderRocCurve": 0.7141060342312066,
+        "DetectionRateAtFalsePositiveCount": 0.022988505747126436
+      },
+      "BaselineThreshold": 12.11278,
+      "BaselineValidation": {
+        "TruePositives": 7,
+        "FalsePositives": 59,
+        "FalseNegatives": 59,
+        "Precision": 0.10606060606060606,
+        "Recall": 0.10606060606060606,
+        "F1Score": 0.10606060606060608
+      },
+      "BaselineTest": {
+        "TruePositives": 10,
+        "FalsePositives": 0,
+        "FalseNegatives": 77,
+        "Precision": 1,
+        "Recall": 0.11494252873563218,
+        "F1Score": 0.20618556701030927
+      },
+      "ModelFile": "server_res_eth1out_curve_61.zip"
+    }
+  ]
+}
