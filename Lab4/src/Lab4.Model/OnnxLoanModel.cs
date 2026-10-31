@@ -20,10 +20,11 @@ public static class OnnxLoanModel
             throw new FileNotFoundException("The ONNX model was not found. Run the train command first.", onnxPath);
         }
 
+        using var modelStream = new MemoryStream(File.ReadAllBytes(onnxPath));
         var pipeline = mlContext.Transforms.ApplyOnnxModel(
             outputColumnNames: OnnxGraphOutputs,
             inputColumnNames: FeatureBuilder.InputColumns,
-            modelFile: onnxPath);
+            modelBytes: modelStream);
 
         var emptyData = mlContext.Data.LoadFromEnumerable(Array.Empty<LoanFeatures>());
         return pipeline.Fit(emptyData);
