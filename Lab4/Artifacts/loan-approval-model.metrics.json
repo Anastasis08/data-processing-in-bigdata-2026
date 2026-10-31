@@ -1,0 +1,181 @@
+{
+  "CreatedAtUtc": "2026-10-28T12:18:37.6372258+00:00",
+  "DataSha256": "8C2CC67A13279EC746B15F76F14E8503154274EF7F221D2437033B4407C80CA8",
+  "Seed": 42,
+  "TrainingRows": 492,
+  "TestRows": 122,
+  "SerializedModelRows": 614,
+  "SelectedTrainer": "LbfgsLogisticRegression",
+  "BestTrainerOverall": "Gam",
+  "SelectionMetric": "Mean cross-validated AUC among ONNX-exportable trainers",
+  "CrossValidation": [
+    {
+      "Name": "Prior (baseline)",
+      "AreaUnderRocCurve": {
+        "Mean": 0.5,
+        "StandardDeviation": 0
+      },
+      "Accuracy": {
+        "Mean": 0.6856137278518679,
+        "StandardDeviation": 0.023228916775158894
+      },
+      "F1Score": {
+        "Mean": 0.8132632687576506,
+        "StandardDeviation": 0.01634802927887597
+      },
+      "LogLoss": {
+        "Mean": "NaN",
+        "StandardDeviation": "NaN"
+      },
+      "OnnxExportable": null
+    },
+    {
+      "Name": "SdcaLogisticRegression",
+      "AreaUnderRocCurve": {
+        "Mean": 0.778872576971942,
+        "StandardDeviation": 0.04679707454642662
+      },
+      "Accuracy": {
+        "Mean": 0.8105670270580976,
+        "StandardDeviation": 0.04453961145503005
+      },
+      "F1Score": {
+        "Mean": 0.8767402271233717,
+        "StandardDeviation": 0.027253311882248693
+      },
+      "LogLoss": {
+        "Mean": 0.698913219247569,
+        "StandardDeviation": 0.060390029748748845
+      },
+      "OnnxExportable": true
+    },
+    {
+      "Name": "LbfgsLogisticRegression",
+      "AreaUnderRocCurve": {
+        "Mean": 0.7842678363029254,
+        "StandardDeviation": 0.04989347815636179
+      },
+      "Accuracy": {
+        "Mean": 0.8091676118261375,
+        "StandardDeviation": 0.04249472728503505
+      },
+      "F1Score": {
+        "Mean": 0.8745178530311613,
+        "StandardDeviation": 0.025111488411049824
+      },
+      "LogLoss": {
+        "Mean": 0.6855626588336741,
+        "StandardDeviation": 0.10269387315429943
+      },
+      "OnnxExportable": true
+    },
+    {
+      "Name": "FastTree",
+      "AreaUnderRocCurve": {
+        "Mean": 0.7798107351614739,
+        "StandardDeviation": 0.07274160880496114
+      },
+      "Accuracy": {
+        "Mean": 0.8088640199934989,
+        "StandardDeviation": 0.05566519578013104
+      },
+      "F1Score": {
+        "Mean": 0.8720568236824745,
+        "StandardDeviation": 0.03564812924961565
+      },
+      "LogLoss": {
+        "Mean": 0.6916166836475746,
+        "StandardDeviation": 0.1331917947477132
+      },
+      "OnnxExportable": true
+    },
+    {
+      "Name": "FastForest",
+      "AreaUnderRocCurve": {
+        "Mean": 0.7727037009483628,
+        "StandardDeviation": 0.07778689999833645
+      },
+      "Accuracy": {
+        "Mean": 0.8061692984124532,
+        "StandardDeviation": 0.04376476067627449
+      },
+      "F1Score": {
+        "Mean": 0.8730578338800286,
+        "StandardDeviation": 0.027378483936068853
+      },
+      "LogLoss": {
+        "Mean": 0.8184290613007263,
+        "StandardDeviation": 0.17509191985573255
+      },
+      "OnnxExportable": true
+    },
+    {
+      "Name": "LightGbm",
+      "AreaUnderRocCurve": {
+        "Mean": 0.769431441133224,
+        "StandardDeviation": 0.09190963054139417
+      },
+      "Accuracy": {
+        "Mean": 0.8043310282459923,
+        "StandardDeviation": 0.047419179617644774
+      },
+      "F1Score": {
+        "Mean": 0.8684925826861309,
+        "StandardDeviation": 0.03125714594634445
+      },
+      "LogLoss": {
+        "Mean": 0.7077783630465808,
+        "StandardDeviation": 0.15399818295704928
+      },
+      "OnnxExportable": true
+    },
+    {
+      "Name": "Gam",
+      "AreaUnderRocCurve": {
+        "Mean": 0.7850290723017842,
+        "StandardDeviation": 0.055742871273141946
+      },
+      "Accuracy": {
+        "Mean": 0.8124505717010724,
+        "StandardDeviation": 0.03766779270619196
+      },
+      "F1Score": {
+        "Mean": 0.8776449396064543,
+        "StandardDeviation": 0.02316228718381202
+      },
+      "LogLoss": {
+        "Mean": 0.6751515351485797,
+        "StandardDeviation": 0.08484053588362514
+      },
+      "OnnxExportable": false
+    }
+  ],
+  "Test": {
+    "Accuracy": 0.7540983606557377,
+    "AreaUnderRocCurve": 0.7290100250626567,
+    "AreaUnderPrecisionRecallCurve": 0.8237866038389619,
+    "F1Score": 0.8351648351648353,
+    "PositivePrecision": 0.7755102040816326,
+    "PositiveRecall": 0.9047619047619048,
+    "NegativePrecision": 0.6666666666666666,
+    "NegativeRecall": 0.42105263157894735,
+    "LogLoss": 0.7934029589020215,
+    "LogLossReduction": 0.11338670323158061,
+    "ConfusionMatrix": [
+      [
+        76,
+        8
+      ],
+      [
+        22,
+        16
+      ]
+    ]
+  },
+  "BaselineTestAccuracy": 0.6885245901639344,
+  "OnnxParity": {
+    "Rows": 122,
+    "MaxProbabilityDifference": 1.1920928955078125E-07,
+    "MatchingDecisions": 122
+  }
+}
